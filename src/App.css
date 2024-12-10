@@ -1,0 +1,8 @@
+.swap:hover{
+  filter: drop-shadow(0px 0px 10px yellow);
+  transform: scale(1.2);
+}
+
+.scroll-custom::-webkit-scrollbar {
+  display: none;
+}
