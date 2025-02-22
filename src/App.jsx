@@ -17,8 +17,7 @@ function App() {
   const [toObj, setToObj] = useState({
     name: "to", currencyType: "INR", value: 0
   })
-  const swapRef = useRef(null)
-  const [rotate,setRotate] = useState(false)
+  const [rotate, setRotate] = useState(false)
 
   function swapCard() {
     let obj = { ...fromObj, name: "to" }
@@ -31,16 +30,20 @@ function App() {
   //Calculating the currency values conversion
   useEffect(() => {
     async function convertCurrency() {
-      const res = await fetch(`https://api.frankfurter.dev/v1/latest?base=${fromObj.currencyType}`)
-      const data = await res.json()
-      var calculatedValue = fromObj.value * data.rates[toObj.currencyType]
+      try {
+        const res = await fetch(`https://api.frankfurter.dev/v1/latest?base=${fromObj.currencyType}`)
+        const data = await res.json()
+        var calculatedValue = fromObj.value * data.rates[toObj.currencyType]
 
-      calculatedValue = Math.round(calculatedValue * 100) / 100
+        calculatedValue = Math.round(calculatedValue * 100) / 100
 
-      setToObj((t) => (
-        { ...t, value: calculatedValue }
-      ))
-
+        setToObj((t) => (
+          { ...t, value: calculatedValue }
+        ))
+      }
+      catch(err){
+        console.log(err.message)
+      }
     }
     convertCurrency()
   }, [fromObj, toObj])
@@ -51,18 +54,17 @@ function App() {
       <Illustration url={imgUrl} />
 
       <div className="flex p-3 rounded-md flex-col gap-3 md:w-1/3 opacity-0"
-      ref={cardBox}>
-        
+        ref={cardBox}>
+
         <div className="section flex flex-col">
           <Card obj={fromObj} setObj={setFromObj} />
 
           <button className='swap w-10 mx-auto py-0.5   
            duration-150 focus:outline-none'
-           style={{
-            transform: rotate ? 'rotateX(360deg)' : 'rotateX(0deg)'
-           }}
+            style={{
+              transform: rotate ? 'rotateX(360deg)' : 'rotateX(0deg)'
+            }}
             onClick={swapCard}
-            ref={swapRef}
           >
             <img src={iconUrl} alt="" />
           </button>

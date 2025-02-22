@@ -25,9 +25,9 @@ The **Currency Converter** is a React-based web application that allows users to
 
 - **React**: JavaScript library for building the user interface.
 - **Tailwind CSS**: Utility-first CSS framework for responsive and modern designs.
-- **Vite**: Next-generation build tool for fast and efficient React app development.
 - **Frankfurter API**: API for fetching real-time currency exchange rates.
 - **Intersection Observer**: A native browser API used for detecting when an element is in the viewport, which is leveraged in the custom hook `useIntersectionObserver` for animation purposes.
+- **Vite**: Next-generation build tool for fast and efficient React app development.
 
 ## Installation
 
@@ -44,19 +44,23 @@ Ensure you have the following installed:
 
 1. Clone the repository:
    ```bash
-   https://github.com/santhoshpandi/currency-converter-react.git
+   git clone https://github.com/santhoshpandi/currency-converter-react.git
+   ```
 
 2. Navigate to the project directory:
    ```bash
    cd currency-converter-react
+   ```
 
 3. Install the dependencies:
    ```bash
    npm install
+   ```
 
 4. Start the Development server:
    ```bash
    npm run dev
+   ```
 
 The dashboard will be available at http://localhost:5173
 
@@ -75,7 +79,7 @@ The dashboard will be available at http://localhost:5173
 
 ## Acknowledgments
 
-- **Tailwind CSS**: A utility-first CSS framework for rapid UI development.
-- **Vite**: An extremely fast build tool for modern web projects.
 - **React**: A JavaScript library for building user interfaces.
 - **Frankfurther API**: For providing reliable and real-time currency exchange rate data.
+- **Tailwind CSS**: A utility-first CSS framework for rapid UI development.
+- **Vite**: An extremely fast build tool for modern web projects.
