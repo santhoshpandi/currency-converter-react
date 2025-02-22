@@ -2,11 +2,11 @@
 
 ## Overview
 
-The **Currency Converter** is a React-based web application that allows users to convert currencies from one type to another, using real-time exchange rates. The app utilizes **Tailwind CSS** for styling, **Vite** for fast development, and the **Frankfurter API** to fetch live exchange rates for various global currencies. It also includes a custom hook for a smooth sliding effect as elements appear in the viewport.
+The **Currency Converter** is a `React`-based web application that allows users to convert currencies from one type to another, using real-time exchange rates. The app utilizes `Tailwind CSS` for styling, `Vite` for fast development, and the `Frankfurter API` to fetch live exchange rates for various global currencies. It also includes a custom hook for a smooth sliding effect as elements appear in the viewport.
 
 ## Developed by
 
-- **Santhosh Pandi** -- **Live Preview** https://github.com/santhoshpandi/currency-converter-react
+- `Santhosh Pandi` -- **Live Preview** https://github.com/santhoshpandi/currency-converter-react
 
 ## Screenshots
 
